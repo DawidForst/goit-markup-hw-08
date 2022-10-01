@@ -1,0 +1,35 @@
+$button-color: #f5f4fa;
+$header-color: #212121;
+$paragraph-color: #757575;
+$hover-links-color: #2196f3;
+$semi-text-color: #ffffff;
+$icon-color: #afb1b8;
+$footer-icon: rgba(255, 255, 255, 0.1);
+$background-main: #2f303a66;
+$button-hover: #2f303a;
+$background-backdrop: rgba(0, 0, 0, 0.2);
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", "Raleway", sans-serif;
+  color: $paragraph-color;
+}

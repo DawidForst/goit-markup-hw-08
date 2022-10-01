@@ -1,0 +1,85 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 94px;
+  margin-left: auto;
+
+  &__header {
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    line-height: 2;
+    color: $header-color;
+    text-align: left;
+    justify-content: left;
+    padding-left: 24px;
+    padding-top: 20px;
+  }
+  &__paragraph {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    padding-top: 4px;
+  }
+  &__border {
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+  }
+  &__item {
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.875;
+    /* border: 1px solid #eeeeee; */
+    /* identical to box height, or 188% */
+    flex-basis: calc((100% - 60px) / 3);
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $paragraph-color;
+    background: #ffffff;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+    }
+    &:hover .product__info--anime {
+      transform: translateY(0);
+    }
+  }
+
+  &__info {
+    position: absolute;
+    max-width: 370px;
+    max-height: 294px;
+    overflow: hidden;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
+
+    &--anime {
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(100%);
+      background-color: rgba(33, 150, 243, 0.9);
+      display: inline-block;
+      position: relative;
+      width: 374px;
+      height: 295px;
+      color: $button-color;
+      font-size: 18px;
+      line-height: 1.6;
+      padding-left: 24px;
+      padding-top: 20px;
+      text-align: left;
+      transition-property: transform;
+      max-width: 370px;
+      max-height: 294px;
+    }
+  }
+}

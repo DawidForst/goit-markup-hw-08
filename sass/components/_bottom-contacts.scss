@@ -1,0 +1,29 @@
+.bottom-contacts {
+  width: 246px;
+  &__address {
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    line-height: 1.17;
+    color: $semi-text-color;
+    padding-bottom: 9px;
+  }
+
+  &__link {
+    display: flex;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.17;
+
+    letter-spacing: 0.03em;
+    padding-bottom: 9px;
+
+    color: rgba(255, 255, 255, 0.6);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
+    &:hover {
+      color: $hover-links-color;
+      cursor: pointer;
+    }
+  }
+}
