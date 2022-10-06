@@ -1,9 +1,17 @@
 .follow-us {
   display: flex;
   list-style: none;
-  margin-left: 82px;
   gap: 10px;
   padding: 0;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      justify-content: left;
+      margin-left: 82px;
+    }
+  }
+
   &__item {
     height: 44px;
     width: 44px;

@@ -1,19 +1,53 @@
 .newslatter {
-  display: flex;
+  display: block;
   list-style: none;
-  margin-left: 82px;
-  gap: 10px;
+  // margin-left: 82px;
+  // gap: 15px;
   padding: 0;
+  margin-top: 20px;
+  justify-content: center;
+  // margin-left: 16px;
+  // margin-right: 30px;
+  width: 100%;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      display: flex;
+      // margin-left: 65px;
+      margin-top: 0px;
+      justify-content: left;
+    }
+  }
 
   &__placeholder {
     height: 50px;
-    width: 358px;
+    width: 90%;
+    // max-width: 450px;
     padding: 15px;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: 0.2s;
-    margin-top: 0px;
+    margin-top: 20px;
+    // padding-right: 15px;
+    margin-left: 15px;
+
+    @media screen and (min-width: 768px) {
+      & {
+        width: 65%;
+        margin-left: 166px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      & {
+        margin-left: 76px;
+        margin-top: 0px;
+        width: 358px;
+        // display: flex;
+        // margin-left: 82px;
+      }
+    }
 
     &:hover,
     &:active,
@@ -31,7 +65,7 @@
     border-radius: 4px;
     border-style: none;
     padding-right: 42px;
-    margin-left: 11px;
+    margin-left: auto;
     width: 200px;
     height: 50px;
     color: $semi-text-color;
@@ -41,6 +75,23 @@
     font-family: "Roboto";
     transition: 0.2s;
     margin-top: 20px;
+    justify-content: center;
+    margin-left: 80px;
+
+    @media screen and (min-width: 768px) {
+      & {
+        margin-left: 291px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      & {
+        // justify-content: space-between;
+        align-items: baseline;
+        margin-left: 11px;
+        justify-content: left;
+      }
+    }
 
     &:hover {
       transition: 0.3s;
@@ -52,14 +103,13 @@
       border: 1px solid $hover-links-color;
       box-shadow: none;
     }
-
-    &--logo {
-      position: absolute;
-      fill: $semi-text-color;
-      width: 65px;
-      height: 24px;
-      margin-left: -4px;
-      margin-top: -2px;
-    }
+  }
+  &__icon {
+    position: absolute;
+    fill: $semi-text-color;
+    width: 65px;
+    height: 24px;
+    margin-left: -4px;
+    margin-top: -2px;
   }
 }

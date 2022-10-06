@@ -1,7 +1,7 @@
 .header {
   margin: 0 auto;
   background: $semi-text-color;
-  // max-width: 1200px;
+  max-width: 1200px;
   line-height: 1.19;
   color: $header-color;
   display: flex;
@@ -10,10 +10,11 @@
 
   &__container {
     display: flex;
-    max-width: 1200px;
+    // max-width: 768px;
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
     align-items: center;
+    justify-content: space-between;
   }
 }

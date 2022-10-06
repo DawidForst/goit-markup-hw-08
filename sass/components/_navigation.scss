@@ -10,6 +10,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  display: none;
+  @media screen and (min-width: 768px) {
+    & {
+      display: flex;
+    }
+  }
 
   &__item {
     font-weight: 500;
@@ -27,17 +33,16 @@
     &:focus {
       color: $hover-links-color;
     }
-    &--actives::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 4px;
-      background-color: $hover-links-color;
-      transform: translateY(31px);
-      border-radius: 2px;
-    }
   }
-
+  &__actives::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $hover-links-color;
+    transform: translateY(31px);
+    border-radius: 2px;
+  }
   &__list-item {
     padding-right: 46px;
   }

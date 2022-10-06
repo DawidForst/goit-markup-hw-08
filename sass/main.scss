@@ -15,3 +15,31 @@
 @import "./components/portfolio-buttons";
 @import "./components/portfolio-products";
 @import "./components/modal";
+@import "./components/mobile-menu";
+@import "./components/mixins";
+
+img {
+  min-width: 40%;
+  block-size: auto;
+  justify-content: center;
+}
+
+@media screen and(min-width: 768px) {
+  img {
+    min-width: 64%;
+    block-size: auto;
+    justify-content: center;
+  }
+}
+@media screen and(min-width: 1200px) {
+  img {
+    min-width: 100%;
+    block-size: auto;
+    justify-content: center;
+  }
+}
+
+input {
+  line-height: 1.15;
+  margin: 0;
+}

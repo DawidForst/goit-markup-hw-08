@@ -5,12 +5,17 @@
   display: flex;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   align-items: center;
   letter-spacing: 0.03em;
   color: $hover-links-color;
   & > span {
     color: $header-color;
+  }
+  @media (min-width: 1280px) {
+    & {
+      font-size: 26px;
+    }
   }
 }
 
@@ -24,6 +29,20 @@
   letter-spacing: 0.03em;
   color: $hover-links-color;
   padding-bottom: 20px;
+  justify-content: center;
+  // width: 768px;
+
+  @media screen and (min-width: 768px) {
+    & {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      justify-content: left;
+    }
+  }
 
   & > span {
     color: $semi-text-color;

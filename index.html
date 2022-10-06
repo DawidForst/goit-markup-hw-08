@@ -16,6 +16,7 @@
     <title>Zadanie domowe GOIT Polska</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <header class="header">
@@ -25,9 +26,7 @@
         <nav class="navigation-section">
           <ul class="navigation">
             <li class="navigation__list-item">
-              <a
-                class="navigation__item navigation__item--actives"
-                href="index.html"
+              <a class="navigation__item navigation__actives" href="index.html"
                 >Agencja</a
               >
             </li>
@@ -43,7 +42,7 @@
         <ul class="top-contact">
           <li>
             <a
-              class="top-contact__icons--mail top-contact__icons"
+              class="top-contact__mail top-contact__icons"
               href="mailto:info@devstudio.com"
             >
               <svg class="top-contact__svg" width="16" height="12">
@@ -55,7 +54,7 @@
           </li>
           <li>
             <a
-              class="top-contact__icons--phone top-contact__icons"
+              class="top-contact__phone top-contact__icons"
               href="tel:+48111111111"
               ><svg class="top-contact__svg" width="10" height="16">
                 <use xlink:href="./images/sprite.svg#smartphone-logo"></use>
@@ -64,8 +63,69 @@
             >
           </li>
         </ul>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="24" height="24">
+            <use href="./images/sprite.svg#mobile-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="24" height="24">
+          <use href="./images/sprite.svg#x"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu__item">
+          <a href="index.html" class="mobile-menu__link--current">Agencja</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="portfolio.html" class="mobile-menu__link">Portfolio</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__link">Kontakt</a>
+        </li>
+      </ul>
+
+      <div>
+        <ul class="mobile-contacts">
+          <li class="mobile-contacts__item">
+            <a class="mobile-contacts__link--accent" href="tel:+48111111111"
+              >+48 111 111 111</a
+            >
+          </li>
+          <li class="mobile-contacts__item">
+            <a class="mobile-contacts__link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link">Instagram</a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link">Twitter</a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link">Facebook</a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <main>
       <section class="main">
         <h1 class="main__headline">
@@ -186,8 +246,8 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team__item--name">John Doe</h3>
-              <span class="team__item--job">Product Designer</span>
+              <h3 class="team__name">John Doe</h3>
+              <span class="team__job">Product Designer</span>
               <ul class="team__card-list">
                 <li>
                   <a href="#">
@@ -251,8 +311,8 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team__item--name">John Doe</h3>
-              <span class="team__item--job">Frontend Developer</span>
+              <h3 class="team__name">John Doe</h3>
+              <span class="team__job">Frontend Developer</span>
 
               <ul class="team__card-list">
                 <li>
@@ -317,8 +377,8 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team__item--name">John Doe</h3>
-              <span class="team__item--job">Marketing</span>
+              <h3 class="team__name">John Doe</h3>
+              <span class="team__job">Marketing</span>
               <ul class="team__card-list">
                 <li>
                   <a href="#">
@@ -382,8 +442,8 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team__item--name">John Doe</h3>
-              <span class="team__item--job">UI Designer</span>
+              <h3 class="team__name">John Doe</h3>
+              <span class="team__job">UI Designer</span>
               <ul class="team__card-list">
                 <li>
                   <a href="#">
@@ -622,7 +682,7 @@
               />
               <button type="submit" class="newslatter__button">
                 Zapisz się
-                <svg class="newslatter__button--logo">
+                <svg class="newslatter__icon">
                   <use
                     xlink:href="./images/sprite.svg#send"
                     width="24"
@@ -734,5 +794,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
