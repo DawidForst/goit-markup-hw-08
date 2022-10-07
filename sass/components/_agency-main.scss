@@ -5,9 +5,9 @@
   flex-direction: column;
   padding: 200px 0;
   display: flex;
-  max-width: 1200px;
-  min-width: 320px;
-  width: auto;
+  max-width: 1600px;
+  min-width: 480px;
+  // width: 100%;
   // min-width: none;
   // max-height: 600px;
   margin: auto;
@@ -19,7 +19,7 @@
     ),
     url("../images/background.jpg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: center;
 
   background-color: $background-main;
