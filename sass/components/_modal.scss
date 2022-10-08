@@ -6,12 +6,20 @@
   // width: 528px;
   // height: 581px;
   min-width: 300px;
-  width: 80%;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
   background-color: $semi-text-color;
   display: flex;
   font-size: 12px;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      max-width: 528px;
+    }
+  }
 
   &__backdrop {
     position: fixed;
@@ -46,36 +54,43 @@
   &__form-header {
     font-weight: 700;
     font-size: 20px;
-    line-height: 2.3px;
+    line-height: 2.3;
     color: $header-color;
+    margin: 0;
+    margin-bottom: 12px;
   }
   &__description {
-    margin-left: 15px;
+    // margin-left: 15px;
     font-size: 12px;
   }
   &__icons {
-    position: absolute;
+    position: relative;
     height: 20px;
     width: 20px;
+    left: -15px;
+    bottom: -40px;
   }
 
-  &__icon-position1 {
-    top: 126px;
-    left: 52px;
-  }
-  &__icon-position2 {
-    top: 192px;
-    left: 52px;
-  }
-  &__icon-position3 {
-    top: 258px;
-    left: 51px;
-  }
+  // &__icon-position1 {
+  //   top: 126px;
+  //   left: 52px;
+  // }
+  // &__icon-position2 {
+  //   top: 192px;
+  //   left: 52px;
+  // }
+  // &__icon-position3 {
+  //   top: 258px;
+  //   left: 51px;
+  // }
   &__terms-and-conditions {
+    position: relative;
+    display: block;
     font-size: 14px;
     padding: 15px 0 20px 0;
     & input {
-      position: absolute;
+      // display: block;
+      // position: relative;
       opacity: 0;
       height: 0;
       width: 0;
@@ -90,19 +105,21 @@
     position: absolute;
     width: 11px;
     height: 8px;
-    left: 48px;
-    top: 460px;
+    left: 3px;
+    top: 3px;
+    margin: 0 auto;
+    display: block;
     z-index: 999;
     fill: $semi-text-color;
     cursor: pointer;
   }
   &__checkmark {
-    position: absolute;
+    position: fixe;
     cursor: pointer;
     height: 15px;
     width: 16px;
-    top: 457px;
-    left: 45px;
+    top: 0;
+    left: 0;
     border-radius: 2px;
     background-color: $semi-text-color;
     border: $header-color 2px solid;
@@ -111,6 +128,7 @@
   &__statement {
     flex-wrap: wrap;
     cursor: pointer;
+    margin-left: 10px;
   }
 
   &__link-terms:hover {
@@ -130,6 +148,7 @@
     font-weight: 700;
     font-family: "Roboto";
     transition: 0.2s;
+    margin-top: 10px;
 
     &:hover {
       box-shadow: 2px 2px 10px $button-hover;
@@ -140,10 +159,11 @@
   }
   &__form-input {
     display: block;
-    padding: 0 0 0 32px;
-    margin: 3px 20px 10px 15px;
+    // padding: 0 0 0 32px;
+    margin: 4px 0 10px 0;
     height: 40px;
-    width: 448px;
+    width: 100%;
+    max-width: 448px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -151,7 +171,8 @@
 
   &__form-comment {
     height: 120px;
-    width: 448px;
+    width: 100%;
+    max-width: 448px;
     padding: 12px 16px;
     border-radius: 4px;
     resize: none;
@@ -171,15 +192,26 @@
   &__form-hover:hover > &__form-input,
   &__form-hover:focus-within > &__form-input,
   &__form-hover:active > &__form-input {
+    // do sprawdzenia
+    position: relative;
+    display: block;
+
     border: $hover-links-color 1px solid;
     box-shadow: none;
     outline: none;
   }
   &__form-hover:hover > &__icons,
   &__form-hover:focus > &__icons {
+    position: relative;
     fill: $hover-links-color;
   }
   &__form-hover:focus-within {
+    position: relative;
     fill: $hover-links-color;
+  }
+
+  &__form-hover {
+    position: relative;
+    display: block;
   }
 }
