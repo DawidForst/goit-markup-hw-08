@@ -1,5 +1,5 @@
 .newslatter {
-  display: block;
+  display: flex;
   list-style: none;
   // margin-left: 82px;
   // gap: 15px;
@@ -9,10 +9,14 @@
   // margin-left: 16px;
   // margin-right: 30px;
   width: 100%;
+  // flex-direction: column;
+  align-items: left;
+  margin-left: auto;
 
   @media screen and (min-width: 1200px) {
     & {
       display: flex;
+      align-items: flex-start;
       // margin-left: 65px;
       margin-top: 0px;
       justify-content: left;
@@ -22,20 +26,21 @@
   &__placeholder {
     height: 50px;
     width: 90%;
-    // max-width: 450px;
     padding: 15px;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: 0.2s;
-    margin-top: 20px;
+    // margin-top: 20px;
     // padding-right: 15px;
     margin-left: 15px;
+    // justify-content: left;
+    align-items: left;
 
     @media screen and (min-width: 768px) {
       & {
-        width: 65%;
-        margin-left: 166px;
+        width: 100%;
+        margin-left: 15%;
       }
     }
 
@@ -43,7 +48,8 @@
       & {
         margin-left: 76px;
         margin-top: 0px;
-        width: 358px;
+        margin-bottom: 40px;
+        width: 300px;
         // display: flex;
         // margin-left: 82px;
       }
@@ -66,7 +72,7 @@
     border-style: none;
     padding-right: 42px;
     margin-left: auto;
-    width: 200px;
+    width: 50%;
     height: 50px;
     color: $semi-text-color;
     cursor: pointer;
@@ -76,11 +82,11 @@
     transition: 0.2s;
     margin-top: 20px;
     justify-content: center;
-    margin-left: 80px;
+    margin-left: 30%;
 
     @media screen and (min-width: 768px) {
       & {
-        margin-left: 291px;
+        width: 200px;
       }
     }
 
@@ -88,7 +94,7 @@
       & {
         // justify-content: space-between;
         align-items: baseline;
-        margin-left: 11px;
+        margin-left: 12px;
         justify-content: left;
       }
     }

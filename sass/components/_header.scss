@@ -1,7 +1,8 @@
 .header {
   margin: 0 auto;
   background: $semi-text-color;
-  max-width: 1200px;
+  width: 100%;
+  // max-width: 1200px;
   line-height: 1.19;
   color: $header-color;
   display: flex;
@@ -9,8 +10,9 @@
   border-bottom: solid 1px #ececec;
 
   &__container {
+    // min-width: 290px;
     display: flex;
-    // max-width: 768px;
+    max-width: 1200px;
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;

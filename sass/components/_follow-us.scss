@@ -22,8 +22,14 @@
     transition-property: background-color;
     margin-top: 20px;
 
-    &:hover {
-      background-color: $hover-links-color;
+    @media screen and (min-width: 768px) {
+      & {
+        margin-bottom: 35px;
+      }
+
+      &:hover {
+        background-color: $hover-links-color;
+      }
     }
   }
 }

@@ -108,6 +108,7 @@
   padding-top: 64px;
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 
   &__item {
     position: relative;
