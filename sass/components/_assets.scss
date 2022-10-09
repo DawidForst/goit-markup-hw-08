@@ -18,7 +18,7 @@
   @media screen and (min-width: 768px) {
     & {
       display: flex;
-      flex-basis: calc((100% - 30x) / 2);
+      flex-basis: calc((100% - 30px) / 2);
       text-align: left;
       flex-wrap: wrap;
     }

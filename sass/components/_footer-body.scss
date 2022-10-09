@@ -3,29 +3,33 @@
   color: $semi-text-color;
   padding: 60px 0;
   width: 100%;
+  gap: 50px;
+  // flex-basis: calc((100% - 50px) / 2);
+
   &__container {
     // display: flex;
     display: block;
     margin: 0 auto;
     align-items: baseline;
     justify-content: space-around;
-    margin: 0 76px;
     gap: 50px;
 
     @media screen and (min-width: 768px) {
       & {
         display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
         flex-wrap: wrap;
-        align-items: center;
-        flex-basis: calc((100%) / 2);
+        flex-basis: calc((100% - 50px) / 2);
       }
     }
 
     @media screen and (min-width: 1200px) {
       & {
-        align-items: center;
+        align-items: baseline;
         justify-content: center;
         flex-wrap: nowrap;
+        margin: 0 76px;
       }
     }
   }
@@ -39,6 +43,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+    margin-bottom: 20px;
 
     @media screen and (min-width: 768px) {
       & {
@@ -47,13 +52,6 @@
       }
     }
 
-    // width: 450px;
-
-    // @media screen and (min-width: 320px) {
-    //   & {
-    //     display: flex;
-    //   }
-    // }
     @media screen and (min-width: 1200px) {
       & {
         margin-left: 80px;

@@ -459,8 +459,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: calc((100% - 30x) / 2);
-        flex-basis: calc((100% - 30x) / 2);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
     text-align: left;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -743,6 +743,7 @@ body {
   color: #ffffff;
   padding: 60px 0;
   width: 100%;
+  gap: 50px;
 }
 .footer__container {
   display: block;
@@ -752,7 +753,6 @@ body {
           align-items: baseline;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 0 76px;
   gap: 50px;
 }
 @media screen and (min-width: 768px) {
@@ -760,25 +760,29 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    -ms-flex-preferred-size: calc((100% - 50px) / 2);
+        flex-basis: calc((100% - 50px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    margin: 0 76px;
   }
 }
 .footer__header {
@@ -796,6 +800,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer__header {
@@ -901,9 +906,14 @@ body {
   .follow-us__item {
     margin-bottom: 35px;
   }
-  .follow-us__item:hover {
-    background-color: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .follow-us__item {
+    margin-top: 0px;
   }
+}
+.follow-us__item:hover {
+  background-color: #2196f3;
 }
 
 .newslatter {
@@ -916,17 +926,22 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  margin-left: auto;
+  gap: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: calc(100% - 15px);
+      flex-basis: calc(100% - 15px);
 }
 @media screen and (min-width: 1200px) {
   .newslatter {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -934,26 +949,24 @@ body {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
+    -ms-flex-preferred-size: calc(50% - 12px);
+        flex-basis: calc(50% - 12px);
   }
 }
 .newslatter__placeholder {
   height: 50px;
-  width: 90%;
+  -ms-flex-preferred-size: calc(100% - 30px);
+      flex-basis: calc(100% - 30px);
   padding: 15px;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  margin-left: 15px;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
 }
 @media screen and (min-width: 768px) {
   .newslatter__placeholder {
     width: 100%;
-    margin-left: 15%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -961,7 +974,6 @@ body {
     margin-left: 76px;
     margin-top: 0px;
     margin-bottom: 40px;
-    width: 300px;
   }
 }
 .newslatter__placeholder:hover, .newslatter__placeholder:active, .newslatter__placeholder:focus {
@@ -978,8 +990,7 @@ body {
   border-radius: 4px;
   border-style: none;
   padding-right: 42px;
-  margin-left: auto;
-  width: 50%;
+  width: 200px;
   height: 50px;
   color: #ffffff;
   cursor: pointer;
@@ -992,7 +1003,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (min-width: 768px) {
   .newslatter__button {
@@ -1008,6 +1021,9 @@ body {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
+    margin-top: 0;
+    width: 240px;
+    height: 50px;
   }
 }
 .newslatter__button:hover {
