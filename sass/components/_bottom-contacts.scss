@@ -13,11 +13,12 @@
         justify-content: left;
       }
     }
-  }
 
-  @media screen and (min-width: 1200px) {
-    & {
-      justify-content: left;
+    @media screen and (min-width: 1200px) {
+      & {
+        text-align: left;
+        // margin-right: -8px;
+      }
     }
   }
 

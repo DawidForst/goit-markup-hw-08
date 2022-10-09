@@ -1,7 +1,7 @@
 .footer {
   background: #2f303a;
   color: $semi-text-color;
-  padding: 60px 0;
+  padding: 60px 15px;
   width: 100%;
   gap: 50px;
   // flex-basis: calc((100% - 50px) / 2);
@@ -29,12 +29,13 @@
 
     @media screen and (min-width: 1200px) {
       & {
-        margin: auto;
         // max-width: 1200px;
+        gap: 70px;
+        flex-basis: calc((100% - 240px) / 3);
+        margin: auto;
         align-items: baseline;
         justify-content: center;
         flex-wrap: nowrap;
-        // margin-left: 685px;
       }
     }
   }
@@ -57,12 +58,13 @@
         margin-bottom: 0;
         align-items: baseline;
         // margin: 0 216px;
+        margin-right: 8px;
       }
     }
 
     @media screen and (min-width: 1200px) {
       & {
-        margin-left: 80px;
+        // margin-left: 20px;
         justify-content: left;
       }
     }

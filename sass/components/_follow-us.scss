@@ -8,7 +8,8 @@
   @media screen and (min-width: 1200px) {
     & {
       justify-content: left;
-      margin-left: 82px;
+      // margin-left: 82px;
+      // margin-left: 12px;
     }
   }
 
@@ -29,7 +30,9 @@
     }
     @media screen and (min-width: 1200px) {
       & {
-        margin-top: 0px;
+        margin-top: 20px;
+        // margin-right: px;
+        margin-left: 0px;
       }
     }
 

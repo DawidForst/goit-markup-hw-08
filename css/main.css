@@ -773,14 +773,14 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .clients__container {
-    padding: 0;
+    padding: 0 15px;
   }
 }
 
 .footer {
   background: #2f303a;
   color: #ffffff;
-  padding: 60px 0;
+  padding: 60px 15px;
   width: 100%;
   gap: 50px;
 }
@@ -814,6 +814,9 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
+    gap: 70px;
+    -ms-flex-preferred-size: calc((100% - 240px) / 3);
+        flex-basis: calc((100% - 240px) / 3);
     margin: auto;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
@@ -850,11 +853,11 @@ body {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    margin-right: 8px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__header {
-    margin-left: 80px;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -878,10 +881,8 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .bottom-contacts {
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+  .bottom-contacts__address {
+    text-align: left;
   }
 }
 .bottom-contacts__link {
@@ -931,7 +932,6 @@ body {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    margin-left: 82px;
   }
 }
 .follow-us__item {
@@ -953,7 +953,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .follow-us__item {
-    margin-top: 0px;
+    margin-top: 20px;
+    margin-left: 0px;
   }
 }
 .follow-us__item:hover {
@@ -995,6 +996,7 @@ body {
             justify-content: left;
     -ms-flex-preferred-size: calc(50% - 12px);
         flex-basis: calc(50% - 12px);
+    margin-left: 8px;
   }
 }
 .newslatter__placeholder {
@@ -1015,9 +1017,11 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .newslatter__placeholder {
-    margin-left: 76px;
-    margin-top: 0px;
+    margin-left: -8px;
+    margin-top: 20px;
     margin-bottom: 40px;
+    width: 310px;
+    height: 50px;
   }
 }
 .newslatter__placeholder:hover, .newslatter__placeholder:active, .newslatter__placeholder:focus {
@@ -1065,7 +1069,7 @@ body {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    margin-top: 0;
+    margin-top: 20px;
     width: 240px;
     height: 50px;
   }
