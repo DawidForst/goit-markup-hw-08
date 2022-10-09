@@ -770,7 +770,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__container {
-    margin-left: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -789,7 +788,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
-    max-width: 1200px;
+    margin: auto;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -798,7 +797,6 @@ body {
             justify-content: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    margin-left: auto;
   }
 }
 .footer__header {
