@@ -777,13 +777,14 @@ body {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-preferred-size: calc((100% - 50px) / 2);
         flex-basis: calc((100% - 50px) / 2);
+    margin-left: 76px;
+    margin-right: 150px;
   }
 }
 @media screen and (min-width: 1200px) {

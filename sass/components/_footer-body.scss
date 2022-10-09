@@ -19,9 +19,11 @@
         margin-left: auto;
         display: flex;
         align-items: baseline;
-        justify-content: space-evenly;
+        justify-content: space-around;
         flex-wrap: wrap;
         flex-basis: calc((100% - 50px) / 2);
+        margin-left: 76px;
+        margin-right: 150px;
       }
     }
 
@@ -53,6 +55,7 @@
         padding-top: 0px;
         margin-bottom: 0;
         align-items: baseline;
+        // margin: 0 216px;
       }
     }
 
