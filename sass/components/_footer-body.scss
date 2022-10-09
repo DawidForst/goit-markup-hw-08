@@ -26,10 +26,11 @@
 
     @media screen and (min-width: 1200px) {
       & {
+        max-width: 1200px;
         align-items: baseline;
         justify-content: center;
         flex-wrap: nowrap;
-        margin: 0 76px;
+        margin-left: auto;
       }
     }
   }
