@@ -343,8 +343,14 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .section__header {
   display: -webkit-box;
@@ -358,7 +364,12 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .section__header {
+    padding-bottom: 50px;
+  }
 }
 .section--no-top {
   padding-top: 0px;
@@ -437,31 +448,16 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 60px;
-  margin-bottom: 94px;
+  margin-bottom: 30px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
 }
-.assets__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-preferred-size: calc((100% - 30px) / 2);
-      flex-basis: calc((100% - 30px) / 2);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 @media screen and (min-width: 768px) {
   .assets {
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -478,9 +474,34 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin-top: 94px;
+    margin-bottom: 94px;
     text-align: left;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+}
+.assets__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .assets__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .assets__header {
@@ -489,6 +510,11 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #212121;
+}
+@media screen and (min-width: 768px) {
+  .assets__header {
+    text-align: left;
+  }
 }
 .assets__paragraph {
   font-size: 14px;

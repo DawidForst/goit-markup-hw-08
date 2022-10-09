@@ -70,8 +70,15 @@
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+  }
 
   &__header {
     display: flex;
@@ -82,7 +89,13 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $header-color;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      & {
+        padding-bottom: 50px;
+      }
+    }
   }
   &--no-top {
     padding-top: 0px;
