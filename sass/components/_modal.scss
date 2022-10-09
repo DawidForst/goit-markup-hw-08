@@ -58,17 +58,19 @@
     color: $header-color;
     margin: 0;
     margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.5;
   }
   &__description {
     // margin-left: 15px;
     font-size: 12px;
   }
   &__icons {
-    position: relative;
+    position: absolute;
     height: 20px;
     width: 20px;
-    left: -15px;
-    bottom: -40px;
+    left: 15px;
+    bottom: 8px;
   }
 
   // &__icon-position1 {
@@ -87,7 +89,7 @@
     position: relative;
     display: block;
     font-size: 14px;
-    padding: 15px 0 20px 0;
+    padding-left: 35px;
     & input {
       // display: block;
       // position: relative;
@@ -114,7 +116,7 @@
     cursor: pointer;
   }
   &__checkmark {
-    position: fixe;
+    position: absolute;
     cursor: pointer;
     height: 15px;
     width: 16px;
@@ -128,7 +130,7 @@
   &__statement {
     flex-wrap: wrap;
     cursor: pointer;
-    margin-left: 10px;
+    // margin-left: 10px;
   }
 
   &__link-terms:hover {
@@ -137,6 +139,7 @@
   }
 
   &__button {
+    display: block;
     background-color: $hover-links-color;
     border-radius: 4px;
     border-style: none;
@@ -148,7 +151,8 @@
     font-weight: 700;
     font-family: "Roboto";
     transition: 0.2s;
-    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
 
     &:hover {
       box-shadow: 2px 2px 10px $button-hover;
@@ -159,7 +163,7 @@
   }
   &__form-input {
     display: block;
-    // padding: 0 0 0 32px;
+    padding: 0 0 0 34px;
     margin: 4px 0 10px 0;
     height: 40px;
     width: 100%;
@@ -192,8 +196,6 @@
   &__form-hover:hover > &__form-input,
   &__form-hover:focus-within > &__form-input,
   &__form-hover:active > &__form-input {
-    // do sprawdzenia
-    position: relative;
     display: block;
 
     border: $hover-links-color 1px solid;
@@ -202,11 +204,9 @@
   }
   &__form-hover:hover > &__icons,
   &__form-hover:focus > &__icons {
-    position: relative;
     fill: $hover-links-color;
   }
   &__form-hover:focus-within {
-    position: relative;
     fill: $hover-links-color;
   }
 

@@ -12,13 +12,28 @@
     & {
       display: flex;
       flex-wrap: wrap;
-      // flex-basis: calc((100% - 30px) / 2);
     }
   }
 
   @media screen and (min-width: 1200px) {
     & {
       display: flex;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      & {
+        width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      & {
+        width: 270px;
+        height: 260px;
+      }
     }
   }
 
@@ -42,7 +57,6 @@
 
     @media screen and (min-width: 1200px) {
       & {
-        // display: flex;
         flex-wrap: nowrap;
         flex-basis: auto;
       }
@@ -64,7 +78,6 @@
     align-items: center;
     font-size: 16px;
     line-height: 1.875;
-    /* padding-bottom: 30px; */
     text-align: center;
     letter-spacing: 0.03em;
   }
@@ -78,13 +91,11 @@
   &__card-icons {
     height: 44px;
     width: 44px;
-    // width: 100%;
     background-color: $semi-text-color;
     fill: $icon-color;
     border-radius: 50%;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: fill, background-color;
-    // margin-bottom: 30px;
     &:hover {
       fill: $semi-text-color;
       cursor: pointer;

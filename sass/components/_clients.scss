@@ -5,22 +5,14 @@
   align-items: center;
   flex-direction: column;
   background-color: $semi-text-color;
-  // margin: 0 15px;
 }
 
 .clients {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
-  flex-basis: calc((100% - 1000px) / 2);
-
-  // @media screen and (min-width: 768px) {
-  //   & {
-  //     display: flex;
-  //     // flex-basis: calc((100% - 30px) / 3);
-  //   }
-  // }
+  align-items: center;
+  gap: 30px;
 
   @media screen and (min-width: 1200px) {
     & {
@@ -29,53 +21,56 @@
   }
 
   &__item {
-    display: flex;
+    width: 100%;
+    height: 92px;
     gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 1px solid rgba(175, 177, 184, 1);
+    // justify-content: center;
+    // align-items: center;
 
-    flex-basis: calc((100% - 45px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
 
     @media screen and (min-width: 768px) {
       & {
-        // display: flex;
         flex-basis: calc((100% - 60px) / 3);
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      & {
-        flex-wrap: nowrap;
       }
     }
   }
 
   &__logo {
-    height: 92px;
-    width: 170px;
+    border: 1px solid rgba(175, 177, 184, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     border-radius: 4px;
     color: $icon-color;
     fill: $icon-color;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: fill, border-color;
-
-    // @media screen and (min-width: 768px) {
-    //   & {
-    //     // display: flex;
-    //     flex-basis: calc((100% - 60px) / 3);
-    //   }
-    // }
-
-    // @media screen and (min-width: 1200px) {
-    //   & {
-    //     flex-wrap: nowrap;
-    //   }
-    // }
-
+    // flex-basis: calc((100% - 30px) / 2);
     &:hover {
       border-color: $hover-links-color;
       fill: $hover-links-color;
+    }
+  }
+  &__container {
+    min-width: 320px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+
+    @media screen and (min-width: 768px) {
+      & {
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      & {
+        padding: 0;
+      }
     }
   }
 }
