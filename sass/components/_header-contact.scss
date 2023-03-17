@@ -1,0 +1,29 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
+.header-contact {
+  @include flex.quinary(column);
+  gap: 10px;
+  &__icon {
+    fill: color.get("secondary");
+    margin-right: 8px;
+    transition: fill tTiming.$primary;
+  }
+}
+.header-contact__link {
+  @include flex.primary(row);
+  color: color.get("secondary");
+  @include font.medium();
+  transition: color tTiming.$primary;
+  &:hover,
+  &:focus {
+    color: color.get("active");
+    transition: color tTiming.$primary;
+  }
+  &:hover .header-contact__icon,
+  &:focus .header-contact__icon {
+    fill: color.get("active");
+    transition: fill tTiming.$primary;
+  }
+}

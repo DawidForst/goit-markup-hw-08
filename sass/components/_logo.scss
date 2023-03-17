@@ -1,51 +1,17 @@
-// $hover-links-color: #2196f3;
-// $semi-text-color: black;
-
-.logo-top {
-  display: flex;
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+.logo {
   font-family: "Raleway";
-  font-weight: 700;
-  font-size: 24px;
-  align-items: center;
-  letter-spacing: 0.03em;
-  color: $hover-links-color;
-  & > span {
-    color: $header-color;
+  display: block;
+  @include font.logo();
+  &--header {
+    color: color.get("logoHeader");
   }
-  @media (min-width: 1200px) {
-    & {
-      font-size: 26px;
-    }
+  &--footer {
+    color: color.get("tertiary");
+    margin-bottom: 20px;
   }
-}
-
-.logo-bottom {
-  color: $semi-text-color;
-  display: flex;
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  align-items: center;
-  letter-spacing: 0.03em;
-  color: $hover-links-color;
-  padding-bottom: 20px;
-  justify-content: center;
-  // width: 768px;
-
-  @media screen and (min-width: 768px) {
-    & {
-      justify-content: center;
-      align-items: baseline;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    & {
-      justify-content: left;
-    }
-  }
-
-  & > span {
-    color: $semi-text-color;
+  &__color {
+    color: color.get("active");
   }
 }

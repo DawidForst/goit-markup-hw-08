@@ -1,0 +1,23 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
+.address {
+  display: block;
+  @include font.light;
+  @include flex.tertiary(column);
+  gap: 9px;
+  font-style: normal;
+  &__title {
+    font-style: normal;
+    color: color.get("tertiary");
+  }
+}
+.address__link {
+  color: #ffffff99;
+  &:hover,
+  &:focus {
+    color: color.get("active");
+    transition: color tTiming.$primary;
+  }
+}

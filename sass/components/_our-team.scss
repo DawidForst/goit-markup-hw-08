@@ -1,0 +1,32 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+.our-team {
+  &__list {
+    @include flex.wrapSecondary();
+    gap: 30px;
+  }
+  &__list-element {
+    flex-basis: 100%;
+  }
+  &__figure {
+    background: color.get("tertiary");
+    @include flex.secondary;
+    box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px #00000024,
+      0px 2px 1px #00000033;
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__description {
+    padding: 30px 32px;
+  }
+  &__name {
+    @include font.mediumSecondary;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__profession {
+    @include font.lightSecondary;
+    text-align: center;
+    color: color.get("secondary");
+  }
+}

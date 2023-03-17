@@ -1,138 +1,108 @@
-.menu-toggle {
-  fill: $header-color;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    fill: $hover-links-color;
-  }
-
-  @media (min-width: 768px) {
-    & {
-      display: none;
-    }
-  }
-}
-
-.menu-container {
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
+.mobile-menu {
   position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 40px;
-  background-color: $semi-text-color;
-  z-index: 999;
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.menu-container.is-open {
-  transform: translateX(0);
-}
-
-.menu-container .menu-toggle {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  color: $header-color;
-}
-
-.mobile-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.mobile-menu__item {
-  &:not(:last-child) {
-    margin-bottom: 36px;
-  }
-}
-
-.mobile-menu__link {
-  font-size: 40px;
-  font-weight: 500;
-  display: block;
-  color: $header-color;
-  text-decoration: none;
-  line-height: 0.98;
-  letter-spacing: 0.02;
-
-  &--current {
+  padding: 6% 8%;
+  background-color: color.get("tertiary");
+  transition: opacity tTiming.$secondary, visibility tTiming.$secondary;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  @include flex.quaternary(column);
+  &__nav {
+    width: 100%;
+    height: auto;
+    @include flex.quinary(column);
+    gap: 36px;
+    font-weight: 500;
     font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+  &__grid {
+    width: 100%;
+    @include flex.quaternary(column);
+    gap: 64px;
+  }
+  &__nav-element {
+    color: color.get("primary");
+    transition: color tTiming.$primary;
+    &:hover,
+    &:focus {
+      color: color.get("active");
+      transition: color tTiming.$primary;
+    }
+  }
+
+  &__contact {
+    width: 100%;
+    height: auto;
+    @include flex.quinary(column);
+    gap: 32px;
+  }
+  &__phone {
     font-weight: 500;
-    display: block;
-    color: $hover-links-color;
-    text-decoration: none;
-    line-height: 0.98;
-    letter-spacing: 0.02;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: color.get("active");
   }
-
-  &:hover {
-    color: $hover-links-color;
-  }
-}
-
-.mobile-contacts {
-  display: flex;
-  flex-direction: column;
-
-  &__item:not(:last-child) {
-    margin-bottom: 32px;
-  }
-
-  &__link {
-    text-decoration: none;
+  &__email {
+    font-weight: 500;
     font-size: 24px;
-    font-weight: 500;
-    color: $paragraph-color;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: color.get("secondary");
+  }
 
-    &--accent {
-      text-decoration: none;
-      font-size: 34px;
-      font-weight: 500;
-      color: $hover-links-color;
-      line-height: 1.17;
-    }
+  &__social {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: color.get("active");
+  }
+  &__nav-element--active {
+    color: color.get("active");
   }
 }
 
-.mobile-socials {
-  padding-top: 64px;
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-
-  &__item {
-    position: relative;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
-    &:not(:last-child)::before {
-      position: absolute;
-      content: "";
-      display: block;
-      top: 0;
-      right: -10px;
-      height: 100%;
-      width: 1px;
-      background-color: $paragraph-color;
-    }
+.mobile-menu__close-button {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 21px;
+  right: 25px;
+  background-color: color.get("tertiary");
+  border: none;
+  cursor: pointer;
+}
+.mobile-menu__close-button-icon {
+  fill: color.get("primary");
+  transition: fill tTiming.$primary;
+  &:hover,
+  &:focus {
+    fill: color.get("active");
+    transition: fill tTiming.$primary;
   }
-
-  &__link {
-    text-decoration: none;
-    color: $hover-links-color;
-    font-size: 18px;
-    font-weight: 500;
-  }
+}
+.is-open {
+  transition: opacity tTiming.$secondary, visibility tTiming.$secondary;
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
 }

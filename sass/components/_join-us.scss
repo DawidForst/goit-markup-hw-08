@@ -1,0 +1,13 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+
+.join-us {
+  &__title {
+    display: block;
+    @include font.mediumHeavy;
+    text-transform: uppercase;
+    text-align: center;
+    color: color.get("tertiary");
+    margin-bottom: 20px;
+  }
+}

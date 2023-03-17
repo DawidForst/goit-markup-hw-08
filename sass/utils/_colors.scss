@@ -1,0 +1,14 @@
+$colors: (
+  "primary": #212121,
+  "secondary": #757575,
+  "tertiary": #fff,
+  "quaternary": #afb1b8,
+  "active": #2196f3,
+  "logoHeader": #000,
+  "background-primary": #2f303a,
+  "background-secondary": #f5f4fa,
+  "border-primary": #eeeeee,
+);
+@function get($key) {
+  @return map-get($colors, $key);
+}

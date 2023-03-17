@@ -1,0 +1,28 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+
+.what-we-do {
+  padding-top: 0;
+  &__list {
+    @include flex.primary(row);
+    gap: 30px;
+  }
+  &__position {
+    position: relative;
+  }
+  &__text {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include font.mediumHeavy;
+    text-align: center;
+    text-transform: uppercase;
+    color: color.get("tertiary");
+    background-color: #2f303acc;
+    padding: 27px 0;
+    width: 370px;
+    height: 70px;
+  }
+}

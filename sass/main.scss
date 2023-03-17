@@ -1,45 +1,22 @@
-@import "./utils/variables";
-@import "./components/header";
-@import "./components/logo";
-@import "./components/navigation";
-@import "./components/top-contacts";
-@import "./components/agency-main";
-@import "./components/services";
-@import "./components/assets";
-@import "./components/team";
-@import "./components/clients";
-@import "./components/footer-body";
-@import "./components/bottom-contacts";
-@import "./components/follow-us";
-@import "./components/newslatter";
-@import "./components/portfolio-buttons";
-@import "./components/portfolio-products";
-@import "./components/modal";
-@import "./components/mobile-menu";
-@import "./components/mixins";
-
-img {
-  min-width: 40%;
-  block-size: auto;
-  justify-content: center;
-}
-
-@media screen and(min-width: 768px) {
-  img {
-    min-width: 64%;
-    block-size: auto;
-    justify-content: center;
-  }
-}
-@media screen and(min-width: 1200px) {
-  img {
-    min-width: 100%;
-    block-size: auto;
-    justify-content: center;
-  }
-}
-
-input {
-  line-height: 1.15;
-  margin: 0;
-}
+@use "components/global";
+@use "components/header";
+@use "components/logo";
+@use "components/nav";
+@use "components/header-contact";
+@use "components/order";
+@use "components/button";
+@use "components/our-strenghts";
+@use "components/what-we-do";
+@use "components/our-team";
+@use "components/social";
+@use "components/our-clients";
+@use "components/sort";
+@use "components/gallery";
+@use "components/footer";
+@use "components/address";
+@use "components/join-us";
+@use "components/newsletter";
+@use "components/backdrop";
+@use "components/contact-form";
+@use "components/_mobile-menu.scss";
+@use "components/responsiv";

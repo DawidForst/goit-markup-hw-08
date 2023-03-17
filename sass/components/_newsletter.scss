@@ -1,0 +1,54 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+@use "../utils/transitions" as tTiming;
+.newsletter {
+  width: 100%;
+  max-width: 450px;
+  &__title {
+    display: block;
+    color: color.get("tertiary");
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: text;
+  }
+  &__grid {
+    width: 100%;
+    @include flex.tertiary(column);
+    gap: 20px;
+  }
+  &__icon {
+    fill: color.get("tertiary");
+    margin-left: 24px;
+    transition: fill tTiming.$primary;
+  }
+}
+.button--newsletter {
+  &:hover .newsletter__icon,
+  &:focus .newsletter__icon {
+    fill: color.get("primary");
+    transition: fill tTiming.$primary;
+  }
+}
+.newsletter__input {
+  width: 100%;
+  height: auto;
+  color: color.get("tertiary");
+  border: 1px solid #ffffff4d;
+  filter: drop-shadow(0px 4px 4px #00000026);
+  border-radius: 4px;
+  padding: 15px 16px;
+  background-color: transparent;
+  transition: border-color tTiming.$primary;
+  outline: none;
+  &:hover,
+  &:focus {
+    border-color: color.get("active");
+    transition: border-color tTiming.$primary;
+  }
+}

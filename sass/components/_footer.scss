@@ -1,0 +1,13 @@
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+
+.footer {
+  background-color: color.get("background-primary");
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__grid {
+    @include flex.wrap();
+    grid-gap: 144px;
+    row-gap: 60px;
+  }
+}

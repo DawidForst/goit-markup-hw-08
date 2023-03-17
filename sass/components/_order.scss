@@ -1,0 +1,23 @@
+@use "../utils/fonts" as font;
+@use "../utils/colors" as color;
+@use "../utils/mixins" as flex;
+.order {
+  width: 100%;
+  height: auto;
+  background-color: color.get("background-primary");
+  @include flex.tertiary(column);
+  gap: 30px;
+  background-image: linear-gradient(to bottom, #2f303a66 0%, #2f303a66 100%),
+    url("../images/order-480-1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 22% 10%;
+  &__heading {
+    width: 100%;
+    @include font.heavy();
+    text-align: center;
+    text-transform: uppercase;
+    color: color.get("tertiary");
+  }
+}
